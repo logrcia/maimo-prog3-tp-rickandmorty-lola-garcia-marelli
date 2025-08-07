@@ -15,7 +15,7 @@ const CharacterInfo = ({character}) => {
           ) : (
            <h3 className="text-lg italic text-gray-900 mb-4">No special type</h3>
         )}
-        <div>
+        <div className="w-md">
           <h3 className={`px-6 py-3 mb-4 text-xl rounded-4xl ${character.status === "Alive" ? "bg-green-100 text-emerald-700" : character.status === "Dead" ? "bg-red-100 text-red-500" : "bg-gray-100"} w-fit`}>{character.status}</h3>
         </div>
         <div className="mb-2">

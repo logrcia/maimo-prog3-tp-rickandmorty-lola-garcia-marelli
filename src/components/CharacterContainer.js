@@ -17,7 +17,6 @@ const CharacterContainer = ({id}) => {
         try {
             const response = await axios.get(`${BASE_URL}/character/${id}`)
             setCharacter(response.data)
-            console.log(response.data)
             setLoading(false)
         } catch (error) {
             console.log("error")
@@ -30,7 +29,7 @@ const CharacterContainer = ({id}) => {
 
   return (
     <div className="h-full">
-        {loading && <div className="flex justify-center items-center mt-50 "><Image unoptimized src={"/assets/portal.gif"} width={500} height={500} alt="portal"/></div>}
+        {loading && <div className="flex justify-center items-center mt-50 "><Image unoptimized src={"/assets/portal.gif"} width={400} height={400} alt="portal"/></div>}
         {!loading && <CharacterInfo character={character}/>} 
     </div>
   )
